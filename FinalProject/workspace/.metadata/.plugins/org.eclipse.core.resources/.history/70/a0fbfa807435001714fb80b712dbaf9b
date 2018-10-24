@@ -1,0 +1,68 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.awt.Panel;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import java.awt.Font;
+
+public class Frame4 extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Frame4 frame = new Frame4();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Frame4() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 920, 508);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		
+		
+		Panel panel = new Panel();
+		panel.setBounds(0, -11, 902, 478);
+		contentPane.add(panel);
+		
+		ImageIcon authorIMG = new ImageIcon("E:\\Sergey\\workspace\\Calc1\\Resources\\portal.jpg");
+		panel.setLayout(null);
+		JLabel label = new JLabel(authorIMG);
+		label.setBounds(-10009, -10027, 0, 0);
+	    panel.add(label).setBounds(26, 68, 314, 151);
+	    
+	    JButton btnNewButton = new JButton("\u041D\u0430\u0447\u043D\u0435\u043C!");
+	    btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 18));
+	    btnNewButton.setBounds(232, 435, 116, 30);
+	    panel.add(btnNewButton);
+	    
+	    JButton btnNewButton_1 = new JButton("\u0412\u044B\u0445\u043E\u0434");
+	    btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
+	    btnNewButton_1.setBounds(491, 435, 116, 30);
+	    panel.add(btnNewButton_1);
+	   
+	}
+
+}

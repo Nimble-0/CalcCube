@@ -1,0 +1,99 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.awt.Panel;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import java.awt.Font;
+import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Toolkit;
+
+public class Frame4 extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Frame4 frame4 = new Frame4();
+					frame4.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Frame4() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("Resources/Megumin.jpg"));
+		setVisible(true);
+		setTitle("\u041D\u0430\u0447\u0430\u043B\u044C\u043D\u043E\u0435 \u043E\u043A\u043D\u043E");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 920, 508);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		
+		
+		Panel panel = new Panel();
+		panel.setBounds(0, -11, 902, 478);
+		contentPane.add(panel);
+		
+		 JButton btnNewButton = new JButton("\u041D\u0430\u0447\u043D\u0451\u043C");
+		 btnNewButton.addActionListener(new ActionListener() {
+		 	public void actionPerformed(ActionEvent e) {
+		 		Frame1 form1 = new Frame1();              
+				form1.setVisible(true);    
+				setVisible(false);
+				
+		 	}
+		 });
+		    btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		    btnNewButton.setBounds(248, 428, 130, 37);
+		    panel.add(btnNewButton);
+		    
+		    JButton btnNewButton_1 = new JButton("\u0412\u044B\u0445\u043E\u0434");
+		    btnNewButton_1.addActionListener(new ActionListener() {
+		    	public void actionPerformed(ActionEvent arg0) {
+		    		System.exit(0);	
+		    	}
+		    });
+		    btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		    btnNewButton_1.setBounds(518, 428, 130, 37);
+		    panel.add(btnNewButton_1);
+		    
+		    JLabel lblNewLabel = new JLabel("\u041A\u0430\u043B\u044C\u043A\u0443\u043B\u044F\u0442\u043E\u0440 \u0434\u043B\u044F \u043D\u0430\u0445\u043E\u0436\u0434\u0435\u043D\u0438\u044F \u043E\u0431\u044A\u0451\u043C\u0430 \u0438 \u043F\u043B\u043E\u0449\u0430\u0434\u0438 \u043A\u0443\u0431\u0430");
+		    lblNewLabel.setForeground(Color.WHITE);
+		    lblNewLabel.setFont(new Font("Tahoma", Font.ITALIC, 18));
+		    lblNewLabel.setBounds(206, 28, 472, 30);
+		    panel.add(lblNewLabel);
+		
+		ImageIcon authorIMG = new ImageIcon(Frame4.class.getResource("portal.jpg"));
+		panel.setLayout(null);
+		JLabel label = new JLabel(authorIMG);
+		label.setBounds(-10009, -10027, 0, 0);
+	    panel.add(label).setBounds(-2, -21, 960, 540);
+	    
+	    
+	    
+	   
+	   
+	    
+	   
+	}
+}

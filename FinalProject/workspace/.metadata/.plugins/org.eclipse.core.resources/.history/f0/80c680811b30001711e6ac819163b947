@@ -1,0 +1,51 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.awt.Panel;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+public class Frame3 extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Frame3 frame = new Frame3();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Frame3() {
+		setTitle("\u041E\u0431 \u0430\u0432\u0442\u043E\u0440\u0435");
+		setBounds(100, 100, 581, 497);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		Panel panel = new Panel();
+		panel.setBounds(12, 68, 352, 352);
+		contentPane.add(panel);
+		
+		ImageIcon authorIMG = new ImageIcon("E:\\Sergey\\workspace\\Calc1\\Resources\\Img.jpg");
+		JLabel label = new JLabel(authorIMG);
+	    panel.add(label).setBounds(26, 68, 314, 151);
+	}
+
+}
